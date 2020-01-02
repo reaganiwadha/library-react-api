@@ -20,7 +20,7 @@ const getBooks = (request, response) => {
 
 app.route('/books').get(getBooks);
 
-app.listen(80, () => {
-    console.log("Running at port " + 80 +"... i guess");
+app.listen(process.env.PORT, () => {
+    console.log("Running at port " + process.env.PORT +"... i guess");
     console.log("And is connected to the database" + connectionString + "... I guess")
 });
