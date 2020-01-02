@@ -21,5 +21,5 @@ const getBooks = (request, response) => {
 app.route('/books').get(getBooks);
 
 app.listen(process.env.APP_PORT || 1322, () => {
-    console.log("Running at port " + process.env.APP_PORT || 1322);
+    console.log("Running at port " + (process.env.APP_PORT || 1322));
 });
