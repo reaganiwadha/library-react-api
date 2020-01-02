@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const {pool} = require('./config');
+const {pool, connectionString} = require('./config');
 const cors = require('cors');
 
 
@@ -20,6 +20,7 @@ const getBooks = (request, response) => {
 
 app.route('/books').get(getBooks);
 
-app.listen(process.env.APP_PORT || 1322, () => {
-    console.log("Running at port " + (process.env.APP_PORT || 1322));
+app.listen(80, () => {
+    console.log("Running at port " + 80 +"... i guess");
+    console.log("And is connected to the database" + connectionString + "... I guess")
 });
